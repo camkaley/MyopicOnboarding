@@ -1,0 +1,26 @@
+.background {
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+    background: url(../../../Resources/Images/Slick.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: stripes 20s linear infinite;
+    animation: stripes 20s linear infinite;
+    user-select: none;
+}
+
+@-webkit-keyframes stripes {
+    100% {
+      background-position: 400px 500px;
+    }
+  }
+  @keyframes stripes {
+    0% {
+    background-position: 0px 0px;
+    }
+    100% {
+      background-position: 500px -500px;
+    }
+  }
