@@ -45,33 +45,23 @@ export default function Landing() {
       <div
         style={{
           width: "100%",
-          marginTop: "10%",
+          marginTop: "2%",
         }}
       >
         <Header />
-        <InsultInput
-          value={input}
-          handleChange={(newInput) => handleImputChange(newInput)}
-        />
 
-        <div style={{ width: "850px", margin: "0 auto", marginTop: "16px" }}>
-          <SubmitButton
-            disabled={loading}
-            onClick={() => handlePostInsult()}
-            style={{ marginRight: "8px" }}
-            variant="contained"
-            color="primary"
-          >
-            Submit
-          </SubmitButton>
-          <ClearButton
-            disabled={loading}
-            variant="outlined"
-            color="primary"
-            onClick={() => handleImputChange("")}
-          >
-            Clear
-          </ClearButton>
+        <div style={{ width: "600px", margin: "0 auto", marginTop: "16px" }}>
+          <iframe
+            src="http://192.168.0.192:8000/index.html"
+            name="myiFrame"
+            scrolling="no"
+            frameborder="1"
+            marginheight="0px"
+            marginwidth="0px"
+            height="450px"
+            width="600px"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </>
