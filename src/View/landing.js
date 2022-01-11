@@ -1,44 +1,8 @@
 import React, { useState } from "react";
 import Header from "../Components/Display/header";
-import InsultInput from "../Components/Input/InsultInput";
-import Button from "@material-ui/core/Button";
-import { withStyles } from "@material-ui/styles";
-import { postInsult } from "../Transfer/Apis";
-
-const SubmitButton = withStyles(() => ({
-  root: {
-    color: "#252525",
-    background: "#00FFFF",
-    "&:hover": {
-      background: "#00FFFF",
-    },
-  },
-}))(Button);
-
-const ClearButton = withStyles(() => ({
-  root: {
-    color: "#00FFFF",
-    border: "1px solid #00FFFF",
-    "&:hover": {
-      border: "1px solid #00FFFF",
-    },
-  },
-}))(Button);
+import "./landing.css"
 
 export default function Landing() {
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  function handleImputChange(input) {
-    console.log(input);
-    setInput(input);
-  }
-
-  function handlePostInsult() {
-    setLoading(true);
-
-    postInsult(input).then(() => setLoading(false));
-  }
 
   return (
     <>
@@ -50,12 +14,12 @@ export default function Landing() {
       >
         <Header />
 
-        <div style={{ width: "600px", margin: "0 auto", marginTop: "16px" }}>
+        <div className="frameBorder">
           <iframe
             src="http://192.168.0.192:8000/index.html"
             name="myiFrame"
             scrolling="no"
-            frameborder="1"
+            frameborder="0"
             marginheight="0px"
             marginwidth="0px"
             height="450px"
