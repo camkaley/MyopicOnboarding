@@ -1,5 +1,5 @@
 import Axios from "axios";
-const url = "http://localhost:4000";
+const url = "http://192.168.0.192:4000";
 
 export function getCount() {
   return new Promise((resolve, reject) => {
